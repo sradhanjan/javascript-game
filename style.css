@@ -1,0 +1,72 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	background-color: white;
+	overflow: hidden;
+}
+.gameContainer
+{
+	background-image: url(background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100vw 100vh;
+	width: 100%;
+	height: 100vh;
+}
+.shaggy
+{
+	background-image: url(shag.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 350px;
+	height: 230px;
+	position: absolute;
+	bottom: 0;
+	left: 15vw;
+}
+.obstacle
+{
+	width: 260px;
+	height: 240px;
+	background-image: url(ghost.png);
+	background-size: cover;
+	position: absolute;
+	bottom: 0;
+	left: 44vw;
+}
+.animateShaggy
+{
+	animation: shaggy 1s linear;
+}
+.obstacleAni
+{
+	animation: obstacleAni 3s linear infinite;
+}
+.gameOver
+{
+	visibility: hidden;
+}
+@keyframes shaggy
+{
+	0%{
+		bottom: 0;
+	}
+	50%{
+		bottom: 480px;
+	}
+	100%{
+		bottom: 0;
+	}
+}
+@keyframes obstacleAni
+{
+	0%{
+		left: 100vw;
+	}
+	100%{
+		left: -10px;
+	}
+}
